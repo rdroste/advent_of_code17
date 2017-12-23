@@ -1,7 +1,7 @@
 import csv
 
 correct_pps = 0
-with open('004_input_test.txt') as infile:
+with open('004_input.txt') as infile:
     reader = csv.reader(infile, delimiter=' ')
     for line in reader:
 

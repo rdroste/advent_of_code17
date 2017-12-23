@@ -1,5 +1,5 @@
 
-infile = open('input.txt','r')
+infile = open('001_input.txt','r')
 lines = infile.readlines()
 c = int(lines[0])
 s = str(c)
