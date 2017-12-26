@@ -12,8 +12,6 @@ with open('006_input.txt','r') as infile:
     line = next(reader)
     mem = np.array(line).astype(np.int)
 
-
-mem_size = len(mem)
 hashes = [myhash(mem)]
 counter = 0
 while True:
@@ -24,7 +22,7 @@ while True:
     mem[pos] = 0
 
     for i in range(val):
-        mem[(pos + 1 + i) % (mem_size)] += 1
+        mem[(pos + 1 + i) % len(mem)] += 1
 
     this_hash = myhash(mem)
     if this_hash in hashes:
