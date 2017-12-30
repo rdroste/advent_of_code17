@@ -10,7 +10,6 @@ pos = [0,0]
 for move in path:
     pos = [sum(p) for p in zip(pos, movements[move])]
 
-# distance = max(pos) + abs(pos[1]-pos[0])
 pos = [abs(p) for p in pos]
 distance = pos[0] + max(0, pos[1] - pos[0]/2)
 print(distance)
