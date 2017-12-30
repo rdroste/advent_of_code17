@@ -1,4 +1,3 @@
-import math
 
 with open('010_input.txt','r') as f:
     content = f.readline()

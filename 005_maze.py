@@ -1,6 +1,5 @@
 
 
-maze = []
 with open('005_input.txt','r') as infile:
     content = infile.readlines()
 maze = [int(s) for s in content]

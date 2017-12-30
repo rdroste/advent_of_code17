@@ -1,8 +1,7 @@
 
 infile = open('001_input.txt','r')
 lines = infile.readlines()
-c = int(lines[0])
-s = str(c)
+s = lines[0].strip()
 
 sum = 0
 for i, d in enumerate(s, -1):
