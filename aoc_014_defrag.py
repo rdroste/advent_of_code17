@@ -1,5 +1,5 @@
 
-from knothash import knothash2
+from aoc_010_hash_2 import knothash2
 
 key = 'ugkiagan'
 result = 0

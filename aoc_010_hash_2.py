@@ -1,23 +1,6 @@
 
 from functools import reduce
-
-
-def knothash(lengths, nums, pos, skip):
-    n = len(nums)
-    for l in lengths:
-
-        if l > n-1:
-            continue
-
-        for i in range(0, l//2):
-            x = (pos + i) % n
-            y = (pos + l - i - 1) % n
-            nums[x], nums[y] = nums[y], nums[x]
-
-        pos = (pos + l + skip) % n
-        skip += 1
-
-    return nums, pos, skip
+from aoc_010_hash import knothash
 
 
 def knothash2(content):
@@ -34,3 +17,9 @@ def knothash2(content):
         dense.append(reduce(lambda x,y: x ^ y, sparse[i:i+16]))
 
     return ''.join('{:02x}'.format(d) for d in dense)
+
+
+with open('010_input.txt','r') as f:
+    content = f.readline().strip()
+
+print(knothash2(content))
