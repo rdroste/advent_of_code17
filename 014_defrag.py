@@ -2,20 +2,11 @@
 from knothash import knothash2
 
 key = 'ugkiagan'
-dim = 128
-
 result = 0
-for row in range(dim):
+for row in range(128):
     this_key = key + '-' + str(row)
     knot_hash = knothash2(this_key)
-    # bin_hash = ''.join(''.formatfor(c) for c in list(knot_hash))
-
-    for c in knot_hash:
-
-        scale = 16 ## equals to hexadecimal
-        num_of_bits = 4
-        this_bin = bin(int(c, scale))[2:].zfill(num_of_bits)
-        this_num_bin = [int(b) for b in list(this_bin)]
-        result += sum(this_num_bin)
+    bin_hash = ''.join('{:04b}'.format(int(k, 16)) for k in knot_hash)
+    result += bin_hash.count('1')
 
 print(result)
