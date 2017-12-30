@@ -1,10 +1,8 @@
-import csv
 
-with open('002_input.txt') as infile:
-    reader = csv.reader(infile, delimiter='\t')
-    diffs = []
-    for line in reader:
-        row = list(map(int,line))
-        diffs.append(max(row)-min(row))
+with open('002_input.txt') as f:
+    checksum = 0
+    for line in f:
+        row = list(map(int,line.split('\t')))
+        checksum += max(row)-min(row)
 
-print(sum(diffs))
+print(checksum)
