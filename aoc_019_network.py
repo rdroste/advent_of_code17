@@ -25,6 +25,7 @@ def move(pos, direction):
 letters = ''
 pos = [0,13]
 direction = 's'
+nsteps = 0
 while True:
     c = getchr(pos)
     if c == '+':
@@ -45,5 +46,7 @@ while True:
         letters += c
 
     pos = move(pos, direction)
+    nsteps += 1
 
 print(letters)
+print(nsteps)
