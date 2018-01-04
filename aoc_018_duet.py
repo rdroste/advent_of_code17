@@ -28,8 +28,7 @@ with open('018_input.txt','r') as f:
         words = lines[i].strip().split(' ')
 
         for w in words[1:]:
-            if checkifreg(w):
-                if w not in reg:
+            if checkifreg(w) and w not in reg:
                     reg[w] = 0
 
         if words[0] in ops:
@@ -41,8 +40,7 @@ with open('018_input.txt','r') as f:
         elif words[0] == "snd":
             sound = getval(words[1],reg)
 
-        elif words[0] == "rcv":
-            if getval(words[1],reg) != 0:
+        elif words[0] == "rcv" and getval(words[1],reg) != 0:
                 break
 
         if words[0] == "jgz" and getval(words[1],reg) > 0:
