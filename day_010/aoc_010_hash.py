@@ -17,10 +17,11 @@ def knothash(lengths, nums, pos, skip):
     return nums, pos, skip
 
 
-with open('010_input.txt','r') as f:
-    content = f.readline()
-    lengths = [int(x) for x in content.strip().split(',')]
+if __name__ == "__main__":
+    with open('010_input.txt','r') as f:
+        content = f.readline()
+        lengths = [int(x) for x in content.strip().split(',')]
 
-nums = knothash(lengths, list(range(0,256)), 0, 0)[0]
+    nums = knothash(lengths, list(range(0,256)), 0, 0)[0]
 
-print(nums[0]*nums[1])
+    print(nums[0]*nums[1])

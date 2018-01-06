@@ -19,7 +19,8 @@ def knothash2(content):
     return ''.join('{:02x}'.format(d) for d in dense)
 
 
-with open('010_input.txt','r') as f:
-    content = f.readline().strip()
+if __name__ == "__main__":
+    with open('010_input.txt','r') as f:
+        content = f.readline().strip()
 
-print(knothash2(content))
+    print(knothash2(content))

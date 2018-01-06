@@ -1,4 +1,6 @@
 
+import sys
+sys.path.insert(0, '../day_010/')
 from aoc_010_hash_2 import knothash2
 import numpy as np
 from scipy.ndimage.measurements import label
