@@ -1,5 +1,6 @@
 .*
 !.gitignore
-*input*
 *sublime*
 __*
+*.sh
+*test.txt
